@@ -37,9 +37,12 @@ app.post("/cadence", (req, res) => {
   const db = fire.firestore();
   db.collection("cadenceSensor").add({
     //change this collections according to your need
-    temperature: req.body.suhu,
-    height: req.body.tinggi,
-    weight: req.body.berat,
+    Speed: req.body.kph,
+    RPM: req.body.rpm,
+    Cadence: req.body.rpmCrank,
+    Distance: req.body.km,
+    Average: req.body.avg,
+    Calories: req.body.kalori,
     date: new Date(),
   });
   res.send({

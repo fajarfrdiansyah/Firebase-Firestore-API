@@ -4,7 +4,6 @@ const firebase = require("firebase");
 const config = {
   apiKey: "AIzaSyCGqq6oMA1GTbURV0DC-X72ZEhj0aaiRgU",
   authDomain: "esp32-hall-sensor.firebaseapp.com",
-  databaseURL: "https://esp32-hall-sensor-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "esp32-hall-sensor",
   storageBucket: "esp32-hall-sensor.appspot.com",
   messagingSenderId: "251861365362",

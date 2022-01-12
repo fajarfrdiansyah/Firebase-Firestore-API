@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   res.send(
-    "<h1>Tes Express & Firebase Cloud Firestore</h1><ul><li><p><b>GET /data/esp32</b></p></li><li><p><b>POST /data/esp32</b>  => {suhu, tinggi, berat}</p></li></ul>"
+    "<h1>Tes Express & Firebase Cloud Firestore</h1><ul><li><p><b>GET /data/esp32</b></p></li><li><p><b>POST /data/esp32</b>  => {kecepatan, rpm, kalori}</p></li></ul>"
   );
 });
 
 //match databaseName with your database name
-app.get("/cadence", (req, res) => {
+app.get("/TugasAkhir", (req, res) => {
   const db = fire.firestore();
   let wholeData = [];
   db.collection("cadenceSensor")
@@ -33,7 +33,7 @@ app.get("/cadence", (req, res) => {
     });
 });
 
-app.post("/cadence", (req, res) => {
+app.post("/TugasAkhir", (req, res) => {
   const db = fire.firestore();
   db.collection("cadenceSensor").add({
     //change this collections according to your need
